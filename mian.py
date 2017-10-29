@@ -12,7 +12,7 @@ def binToDec(a):
     for i in range(len(algarismos)):
         result += float(algarismos[(len(algarismos) - 1) - i]) * 2**i
 
-    return result #* sign
+    return result * sign
 
 def decToBin(b):
     sign = ""
