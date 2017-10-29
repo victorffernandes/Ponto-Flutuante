@@ -1,10 +1,10 @@
-str = input("Insira o número na base 2 a ser transformado para ponto flutuante")
+num = input("Insira o número na base 2 a ser transformado para ponto flutuante")
 result = ""
-if str == "0" or str == "+0" or str == "-0":
+if num == "0" or str == "+0" or str == "-0":
     result = "0 00000000 00000000000000000000000"
-elif str == "-inf":
+elif num == "-inf":
     result = "1 11111111 00000000000000000000000"
-elif str == "+inf":
+elif num == "+inf":
     result = "0 11111111 00000000000000000000000"
 
 
