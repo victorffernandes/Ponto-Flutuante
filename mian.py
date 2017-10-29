@@ -1,3 +1,13 @@
+str = input("Insira o número na base 2 a ser transformado para ponto flutuante")
+result = ""
+if str == "0" or str == "+0" or str == "-0":
+    result = "0 00000000 00000000000000000000000"
+elif str == "-inf":
+    result = "1 11111111 00000000000000000000000"
+elif str == "+inf":
+    result = "0 11111111 00000000000000000000000"
+
+
 
 def binToDec(a):
     result = 0
@@ -34,5 +44,5 @@ def excess (num, k):
     n1 = binToDec(num)
     n2 = binToDec(k)
 
-    return decToBin(int(n1 +  n2))
+    return decToBin(int(n1 -  n2))
 print(excess("1101010","1111111"))
