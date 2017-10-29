@@ -49,10 +49,10 @@ def getIEEE(num):
     except:
         return "0 11111111 00010000000000000000001"
     print(num[1])
+
     if len(num.split(".")) == 2:
         n1 = num.split(".")[0]
         n2 = ""
-
         for i in range(2, len(n1)):
             n2 += n1[i]
         print(n2)
