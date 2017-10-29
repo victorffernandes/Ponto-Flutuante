@@ -45,29 +45,29 @@ def getIEEE(num):
         return "0 11111111 00000000000000000000000"
 
     try:
-        t = int(num[1:])
+        print(float(num))
     except:
         return "0 11111111 00010000000000000000001"
-
-    if num[1] == 1:
-        n1 = num.split(",")[0]
+    print(num[1])
+    if len(num.split(".")) == 2:
+        n1 = num.split(".")[0]
         n2 = ""
 
         for i in range(2, len(n1)):
             n2 += n1[i]
-
-        n2 += num.split(",")[1]
+        print(n2)
+        n2 += num.split(".")[1]
 
         for i in range(len(n2), 23):
             n2 += "0"
-
+        print(n2)
         if num[0] == "-":
-            return "1 " + excess("+" + len(n1) - 2, 127) + " " + n2
+            return "1 " + excess("+" + str(len(n1) - 2), 127) + " " + n2
         else:
             return "0 " + excess("+" + str(len(n1) - 2), 127) + " " + n2
 
     else:
-
+        print("Desceu aquee!")
         n2 = num[len(num)-24:]
 
         if num[0] == "-":
@@ -75,4 +75,4 @@ def getIEEE(num):
         else:
             return "0 " + "00000000 " + n2
 
-print(getIEEE("num"))
+print(getIEEE(num))
